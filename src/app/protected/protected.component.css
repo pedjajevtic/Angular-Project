@@ -1,0 +1,26 @@
+*{
+	margin:0px;	
+	padding:0px;   
+}
+
+div#menu ul li{
+	margin-top:7px;
+	text-align: center;
+	font-size:15px;
+	background-color: rgb(212, 147, 24);
+	width:285px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:15px;
+	color:white;
+	display: inline-block;
+}
+
+a:link{
+	color: white;
+}
+
+a:hover{
+	font-weight: bolder;
+	font-size: 20px;
+}

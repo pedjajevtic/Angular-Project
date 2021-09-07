@@ -1,0 +1,42 @@
+<p style="font-weight: bolder; text-align: center; font-size: xx-large;"><u>LogIn:</u></p>
+
+<p style="color:rgb(0, 0, 0); text-align: center; font-size: larger;">
+
+<br>
+<br>
+
+<div class="alert alert-danger" role="alert" *ngIf="message">
+  {{ message }}
+</div>
+
+<form class="form-inline" style="text-align: center; font-size: large;" *ngIf="!authService.getUser()">
+  
+  <div class="form-group">
+    <label for="username">Username:</label>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <input class="form-control" name="username" #username>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="form-group">
+    <label for="password">Password:</label> 
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <input class="form-control" type="password" name="password" #password>
+  </div>
+
+  <br>
+  <br>
+
+  <a class="btn btn-warning btn-lg" (click)="login(username.value, password.value)">
+  <b>LogIn</b>
+  </a>
+
+</form>
+
+<div class="well" style="text-align: center;" *ngIf="authService.getUser()">
+  Prijavljeni ste kao: <b>{{ authService.getUser() }}</b>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <a class="btn btn-warning" style="font-weight: bold;" href (click)="logout()">LOG OUT</a>
+</div>

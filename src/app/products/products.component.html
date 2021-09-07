@@ -1,0 +1,16 @@
+<p style="font-weight: bolder; text-align: center; font-size: xx-large;"><u>Usluge:</u></p>
+
+<p style="color:rgb(0, 0, 0); text-align: center; font-size: larger;">
+
+<br>
+<br>
+<div class="navLinks">
+  <a [routerLink]="['./main']" style="color: black;"><u>Glavna</u></a> |
+  <a [routerLink]="['./more-info']" style="color: black;"><u>Više informacija</u></a> |
+  Unesite ID usluge: <input #id size="6">
+  <button (click)="goToProduct(id.value)">Traži</button>
+</div>
+
+<div class="products-area" style="border-style: solid; border-width: 5px; border-color: rgb(212, 147, 24);">
+  <router-outlet></router-outlet>
+</div>

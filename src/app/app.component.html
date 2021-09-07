@@ -1,0 +1,24 @@
+<div class="page-header" style="background-color:rgb(212, 147, 24);">
+
+  <div class="container">
+    <h1 style="color: aliceblue; text-align: center; font-weight: bolder;">Projektni zadatak iz predmeta IT255 - Veb sistemi 1</h1>
+
+    <div class="navLinks" style="text-align: center; font-size: medium;">
+      <br>
+      <a [routerLink]="['/home']" style="color: aliceblue;"><u>Pocetna</u></a> &nbsp; &nbsp; &nbsp;
+      <a [routerLink]="['/about']" style="color: aliceblue;"><u>O nama</u></a> &nbsp; &nbsp; &nbsp;
+      <a [routerLink]="['/contact']" style="color: aliceblue;"><u>Kontakt</u></a> &nbsp; &nbsp; &nbsp;
+      <a [routerLink]="['/products']" style="color: aliceblue;"><u>Usluge koje pruzamo</u></a> &nbsp; &nbsp; &nbsp;
+      <a [routerLink]="['/login']" style="color: aliceblue;"><u>Prijavljivanje</u></a> &nbsp; &nbsp; &nbsp;
+      <a [routerLink]="['/protected']" *ngIf="isAdmin" style="color: aliceblue;"><u>Zasticeno (za Vlasnika)</u></a> &nbsp; &nbsp; &nbsp;
+      <a [routerLink]="['/podesavanja']" *ngIf="isAdmin" style="color: aliceblue;"><u>Podesavanja</u></a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+    <router-outlet>
+    </router-outlet>
+  </div>
+</div>
